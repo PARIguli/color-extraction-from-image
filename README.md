@@ -1,90 +1,41 @@
 # Color Extraction from Image
 
-A simple Python project that lets you upload an image and extract its dominant colors using image processing and clustering.
+This project extracts the dominant colors from an uploaded image and displays them as a color palette.
 
-This repository contains an interactive Jupyter notebook that:
-- uploads an image file,
-- resizes it for faster processing,
-- converts it to RGB format,
-- clusters pixels using K-Means,
-- displays the original image alongside the extracted dominant color palette.
+The notebook processes the image, groups similar pixel colors, and identifies the main colors using the K-Means clustering algorithm. The number of colors can be selected interactively with a slider.
 
-## Features
+## What the Project Does
 
-- Upload image files directly from Google Colab or local notebook sessions
-- Extract the most dominant colors from an image
-- Adjust the number of colors interactively with a slider
-- View a color swatch palette in hexadecimal and RGB formats
-- Built using Pillow and scikit-learn
+- Uploads an image file such as JPG or PNG
+- Resizes and converts the image to RGB format
+- Analyzes the image pixels
+- Extracts the selected number of dominant colors
+- Displays the original image and extracted color swatches
+- Shows the colors in RGB and hexadecimal formats
 
-## Project Files
+## System and Technologies Used
 
-- `color_extraction_from_image.ipynb` — main notebook containing the image upload and color extraction workflow
+- **Programming language:** Python
+- **Development environment:** Jupyter Notebook / Google Colab
+- **Image processing:** Pillow
+- **Numerical processing:** NumPy
+- **Color clustering:** scikit-learn K-Means
+- **Interactive controls:** ipywidgets
+- **Display:** IPython Display and HTML
 
-## Tech Stack
+## How It Works
 
-- Python
-- Pillow
-- NumPy
-- scikit-learn
-- ipywidgets
-- Google Colab support
+1. The user uploads an image.
+2. The image is resized and converted to RGB format.
+3. Pixel data is arranged for analysis.
+4. K-Means clustering groups similar colors together.
+5. The cluster centers are used as the dominant colors.
+6. The resulting colors are displayed as a visual palette.
 
-## Getting Started
+## Main File
 
-### Option 1: Google Colab
+- `color_extraction_from_image.ipynb` — Jupyter Notebook containing the complete project.
 
-1. Open the notebook in Google Colab.
-2. Run the cells in order.
-3. Upload an image when prompted.
-4. Use the slider to change the number of extracted colors.
+## Running the Project
 
-### Option 2: Local Jupyter Notebook
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/PARIguli/color-extraction-from-image.git
-   cd color-extraction-from-image
-   ```
-
-2. Create a virtual environment (optional but recommended):
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate   # On Windows: .venv\Scripts\activate
-   ```
-
-3. Install the required dependencies:
-   ```bash
-   pip install pillow numpy scikit-learn ipywidgets jupyter
-   ```
-
-4. Launch Jupyter:
-   ```bash
-   jupyter notebook
-   ```
-
-5. Open `color_extraction_from_image.ipynb` and run the notebook cells.
-
-## Example Workflow
-
-After uploading an image, the notebook will:
-1. Resize the image to a manageable size,
-2. Flatten the pixel values into a dataset,
-3. Run K-Means clustering to find dominant colors,
-4. Display the image and generated palette.
-
-## Use Cases
-
-This project can be useful for:
-- design and branding analysis,
-- extracting visual themes from images,
-- building image-based recommendation systems,
-- understanding the color composition of artwork or photography.
-
-## License
-
-This project is currently unlicensed. If you plan to share or reuse it publicly, consider adding an open-source license.
-
-## Author
-
-Created by PARIguli.
+Open `color_extraction_from_image.ipynb` in Google Colab or Jupyter Notebook, run the cell, upload an image, and use the slider to select the number of colors to extract.
